@@ -2,7 +2,7 @@ def knapSack(W, wt, val, n, memo):
     if n == 0 or W == 0:
         return 0
 
-    if memo[n][W] != -1:  # Check if result for this subproblem is already computed
+    if memo[n][W] != -1: 
         return memo[n][W]
 
     if wt[n - 1] > W:
@@ -18,5 +18,5 @@ if __name__ == '__main__':
     weight = [3, 2, 5]
     W = 6
     n = len(profit)
-    memo = [[-1 for _ in range(W + 1)] for _ in range(n + 1)]  # List for memoization
+    memo = [[-1 for _ in range(W + 1)] for _ in range(n + 1)]  
     print(knapSack(W, weight, profit, n, memo))
